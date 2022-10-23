@@ -1,0 +1,21 @@
+git clone
+
+dir
+
+git status
+
+git add fileName or .
+
+git status
+
+git commit -m "Comments"
+
+git push
+
+git pull
+
+
+git config --global user.email "sampleusername@gmail.com"
+git config --global user.name "sampleusername"
+
+git checkout <branchName>

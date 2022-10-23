@@ -1,0 +1,36 @@
+HTML - will be used describe web pages 4 hrs
+CSS - will be used to style elements/web pages
+JavaScript - can be used perform actions - 12 - 15 hr
+
+
+login
+userid - html/css
+passwrod - html/css
+button - html/css - action - javascript
+
+
+HTML5  - 7
+CSS3 - 7
+Bootstrap - 7
+
+Typescript - 7
+ES6 - 7
+
+Angular - 20-25 hr
+
+
+Environment Setup
+
+NodeJS - complie js code and render it in browser
+NPM - this can be used to exccute any particulary commands, ex: installing libraries (npm install @angular/cli, npm i types/jquery)
+Angular - is a framework to develop spa(web applications)
+-- component based approch
+website - static/dynamic
+web application
+Typescript - is superset of js
+
+
+Git/GitHub - bitbuck, svn
+HardDisc -- local changes
+LocalRepository -- Stage changes
+RemoteRepository -- git push - github
