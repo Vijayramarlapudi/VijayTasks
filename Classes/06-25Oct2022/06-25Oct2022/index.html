@@ -1,0 +1,53 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <center>
+            <form action="">
+                UserName: <input type="text" id="uname"><br><br>
+                Password: <input type="password" id="pwd"><br><br>
+                <input type="checkbox" id="shwpwd" onclick="change()">Show Password <br><br>
+                <button onclick="loginCheck()">Login</button>
+            </form>
+        </center>
+        
+        <script>    
+
+            function change(){
+                var checkBox = document.getElementById("shwpwd");
+                var password=document.getElementById("pwd");
+
+                if(checkBox.checked == true){
+                    password.type='text'
+                }else{
+                    password.type='password'
+                }
+            }
+
+            function loginCheck(){
+                event.preventDefault();
+                
+                var uname = document.getElementById('uname').value;
+                var pwd = document.getElementById('pwd').value;
+
+                var dbUname = 'venufullstack';
+                var dbPwd = 'venu123'
+
+                if(uname==dbUname && pwd==dbPwd){
+                    alert('Login success');
+
+                }else{
+                    alert('login failure');
+                };
+            }
+
+        </script>
+    </body>
+</html>
+
+<!-- Credentials -->
+
+<!-- userName: venufullstack
+password: venu123 -->

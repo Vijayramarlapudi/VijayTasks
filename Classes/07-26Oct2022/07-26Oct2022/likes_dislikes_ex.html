@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    
+    <body>
+        <i onclick="likes()" id="tup" class="fa fa-thumbs-up" style="font-size:48px;color:grey"></i> <span id="l">0</span>
+        <i onclick="dislikes()" id="tdown" class="fa fa-thumbs-down" style="font-size:48px;color:grey"></i> <span id="d">0</span>
+
+        <script>
+            // declating and assigning value
+            var likes_count=0;    
+            var dislikes_count=0;
+
+            function likes(){
+                // incrementing variable by one(1)
+                likes_count++;
+
+                // accessing an element
+                var lShow = document.getElementById("l");
+                // changing html of element
+                lShow.innerHTML = likes_count;
+
+
+                var tup = document.getElementById("tup");
+                // changing the the element style
+                tup.style.color="green"
+            }
+
+            function dislikes(){
+                dislikes_count++;
+                var dShow = document.getElementById("d");
+                dShow.innerHTML=dislikes_count;
+
+                var tdown = document.getElementById("tdown");
+                tdown.style.color="red"
+            }
+
+        </script>
+    </body>
+</html>

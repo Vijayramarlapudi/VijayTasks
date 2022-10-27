@@ -1,0 +1,98 @@
+Variables:
+
+A variable is an identifier which is used to identify some data.
+
+Variable is a temporary memory location.
+It will be created in RAM
+It can be used to hold the one or more values.
+It will be accessed by OS, while the programme is being executed
+As soon as programme execution completed, variables will be cleared automatically.
+
+
+syntax:
+var var_name="data";
+var username = "venu";
+
+var is keyword
+var_name is variable var_name
+"data" is the value
+
+Variable name always start with alphabet
+No case sensitive
+No Special charaters are allowed, except var_name
+Max 255 charaters can be given.
+
+
+In JS, there are 2 types of variables.
+
+1. Local Variables:
+
+Any variable that gets created inside a function is known as local variable.
+
+The local variables can be accessed only inside the function.
+
+The local variables will be available in local scope.
+
+
+2. Global Variables.
+
+A variable that can be created outside of function, then it is called as global variable.
+global variables can be used throughout the application.
+
+
+Variable Hoisting:
+
+It is a default process used by javascript where all the variable's declaration 
+will be take to the top before execution of the actual code.
+
+
+Problem statement:
+
+Implement like and dislik buttons for my web page.
+
+Algorithem:
+
+get the like and dislike buttons and show them on ui.
+we should make them clickable.
+onclick count should be increased.
+the increased value should be displayed on ui.
+
+
+
+
+
+
+Datatypes:
+
+A datatype specifies which type of data is referred in a variable.
+
+JS provides two types of datatypes.
+
+1.primitive types: number, string, boolean
+2.non-primitive types: arrays and object
+
+
+Non-premitive types:
+
+Arrays:
+
+An array is a linear data structure which stores the data in sequential order.
+
+In Js, an array can store different types of data.
+
+Syntax:
+
+var arr=[];
+
+Array index starts from 0, i.e, the reference of the values stored in the array will be identified through indexes.
+
+
+Problem Statement:
+
+Create a an array that should contain a list of usernames available in database.
+
+Get the total number of users
+
+Get the 3rd user from an users array.
+
+

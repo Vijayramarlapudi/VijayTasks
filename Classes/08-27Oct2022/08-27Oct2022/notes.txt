@@ -1,0 +1,83 @@
+Datatypes:
+
+A datatype specifies which type of data is referred in a variable.
+
+
+JS provides two types of datatypes.
+
+1.primitive types: number, string, boolean, null, undefined, bigint, symbol
+2.non-primitive types: arrays and object
+
+
+Non-premitive types:
+
+Arrays:
+
+An array is a linear data structure which stores the data in sequential order.
+
+In Js, an array can store different types of data.
+
+Syntax:
+
+var arr=[];
+
+Array index starts from 0, i.e, the reference of the values stored in the array will be identified through indexes.
+
+
+Problem Statement:
+
+Create a an array that should contain a list of usernames available in database.
+
+Get the total number of users
+
+Get the 3rd user from an users array.
+
+
+Problem Statement:
+
+Implement a functionality to verify, whether the given username is available or not in the database.
+
+
+
+
+let: is used to create a blocked level variable.
+
+constant: we cannot assign a new value to a constant.
+    
+    
+// Premitive Type Ex
+const a=100;
+a++; // Not Possible
+console.log(a);
+
+// Non Premitive Type Ex
+// a value can be added to non premitive types but can not be reassigned
+const aa = [1,2,3];
+aa.push(100); //Possible
+
+aa=[]  //Not Possible
+console.log(aa);
+
+
+Object: any realtime entity is an object.
+
+object contains properties and actions.
+
+Ex:
+
+Properties of TV:
+height, width, resolution, color, brand, price
+
+Actions of TV:
+on/off, increase volume, dec volume, chang channel
+
+
+syntax:
+
+var object={
+    key:value
+}
+
+key must be a string and value can be of any type,
+
+Implement logic to control a tv remote.

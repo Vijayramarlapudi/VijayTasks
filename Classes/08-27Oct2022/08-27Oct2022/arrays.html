@@ -1,0 +1,54 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        Username: <input onkeyup="verify()" type="text" id="uname"><span id="msg"></span><br><br>
+        <button id="btnRegister" onclick="register()" disabled="true">Register</button>
+
+        <script>
+            var users = ['ravi','kiran','nanda']
+            var uname=document.getElementById("uname");
+            var msg=document.getElementById("msg");
+            var btnRegister=document.getElementById("btnRegister")
+            
+            function verify(){
+                // To avoid refreshing the page
+                event.preventDefault(); 
+
+                if(!uname.value==""){
+                    if(users.includes(uname.value)){
+                        msg.innerHTML="Username is already taken."
+                        msg.style.color="red"
+                        btnRegister.disabled=true;
+                    }else{
+                        msg.innerHTML="Username is available."
+                        msg.style.color="green"
+                        btnRegister.disabled=false;
+                    }
+                }else{
+                    msg.innerHTML="" 
+                    btnRegister.disabled=true;
+                }  
+            }
+
+            function register(){
+                event.preventDefault();
+
+                users.push(uname.value)
+
+                // alert('Total available users are ' + users.length)
+                alert('Total available users are ' + users)
+
+                uname.value="";
+                msg.innerHTML="";
+                btnRegister.disabled=true;
+            }
+
+        </script>
+
+
+
+    </body>
+
+</html>

@@ -1,0 +1,80 @@
+HTML Editors:
+
+notepad
+notepad++
+sublimeText
+Eclipse
+Atom
+VS Code - Recommended
+
+
+HTML Tags:
+
+
+HTML Document Structure:
+
+HTML Attributes:
+
+Attribute: is a keyword, that will provide some extra capabilities to an element.
+
+it can contains one or more values.
+
+<input id='username' style='color:green; background-color:red; height:10px'>
+
+2 Types of attributes are available in HTML
+
+1. Global attributes
+2. Element specific attributes
+
+Global attributes:
+
+id, class, style
+
+<body id='username'> <p id='username'> <h1 id='username'>
+
+
+Element specific attributes:
+
+type, placeholder
+
+<input id="uname" type="text" placeholder="please enter username">
+
+HTML Headings:
+
+<!-- Headings -->
+
+<h1>This a heading</h1>
+<h2>This a heading</h2>
+<h3>This a heading</h3>
+<h4>This a heading</h4>
+<h5>This a heading</h5>
+<h6>This a heading</h6>
+
+
+<!-- Paragraphs -->
+
+<p>this is some info about paragraphs</p>
+<p>this is some info about paragraphs</p>
+<p>this is some info about paragraphs</p>
+<p>this is some info about paragraphs</p>
+
+
+HTML Block level elements, Inline elements:
+
+Block level elements: will be srarted in new line and occupies complete width of web page.
+Ex: <div> <p> <h1> etc....
+
+Inline elements: will be placed on the same line and occupies width based content provided.
+Ex: <a> <span> <img>
+
+
+HTML File Paths:
+
+Absolute file Path: the complete address of a path.
+F:\Angular-8AM\04-21Oct2022\angular.png
+
+Relative file Path: the path which can be accesse relatively from specified folder/project.
+./angular.png
+
+<img src="F:\Angular-8AM\04-21Oct2022\angular.png" alt="">
+<img src="./angular.png" alt="">

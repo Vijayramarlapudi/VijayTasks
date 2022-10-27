@@ -1,0 +1,57 @@
+HTML:
+Hypertext Markup Language -> 
+
+HTML is used to describe web pages.
+
+HTML uses tags to describe the web pages.
+
+A mark up Language is a collection of tags which describes some data / ui component.
+
+tag:  A tag is a keyword that is enclosed in angular brackets(< >) and  provides some information to browser.
+
+ex: <html>, <head>,<body>....
+
+
+
+<html>
+    <head>
+        title
+        favicon
+
+        //styles
+
+        //external style sheet can be added here
+        //external javascript file can be added here
+
+    </head>
+
+
+    <body>
+        tags can be placed here
+
+        //internal javascript
+    </body>
+
+    <footer>
+        
+    </footer>
+</html>
+
+Problem statement: create a webpage for traning institute
+
+1. course details
+    name
+    fee
+    timings
+    instructor
+    more
+
+2. youtube videos
+
+3. images
+
+4. create a register page with name, mail, contact......
+
+5. create a page with course curriculum for javascript
+
+6. Quiz

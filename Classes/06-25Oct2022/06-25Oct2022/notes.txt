@@ -1,0 +1,10 @@
+JavaScript:
+
+is a programming language to deal with webpages, along with html and css.
+26 years
+Brendon Eich
+
+webpages/IOT/Home automation
+
+
+Problem Statement: login page
