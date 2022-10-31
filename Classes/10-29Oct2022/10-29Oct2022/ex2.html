@@ -1,0 +1,47 @@
+<html>
+    <head>
+    </head>
+    <body>
+
+        Username: <input type="text" id="uname" onkeyup="checkLength()">
+        DOB :<input type="text" id ="dob" onkeyup="checkLength()">
+        Marks : <input type="text" id="marks" onkeyup="checkLength()">
+        <button id="btnRegister" disabled="true" onclick="Register()">Submit</button> 
+
+        <script>
+            var dbdob = 1990;
+            var dbmarks = 75;
+
+            function checkLength(){
+                event.preventDefault();
+                
+                var uname= document.getElementById("uname").value
+                var rButton = document.getElementById("btnRegister");
+                var dob=document.getElementById("dob").value
+                var marks=document.getElementById("marks").value   
+                
+                if(uname.length>=4 && dob.length==4 && marks>=75 ){
+                    rButton.disabled=false;
+                }else{
+                    rButton.disabled=true;
+                }   
+            }
+
+            function Register(){
+                event.preventDefault()
+                dob=document.getElementById("dob").value
+                marks=document.getElementById("marks").value
+
+                    
+                    if(dob>=dbdob && marks>=dbmarks){
+                        alert("Your are eligible")
+                    }
+                    else{
+                        alert("Not eligible")
+                    }
+
+            }
+        </script>
+
+    </body>
+</html>

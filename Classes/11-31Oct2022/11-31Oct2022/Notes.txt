@@ -1,0 +1,59 @@
+Control Statements:
+
+Sequential: execute from top to bottom - if, if-else, switch
+Iterative: are used to execute a set of instrction repeatedly based on conditions - while, do-while
+        loop will be repeated for given number of times/elements - for, forEach
+Jump: used to jump the control from one location to other - continue, break and return.
+
+
+
+Sequential: execute from top to bottom - if, if-else, switch
+If- Statement:
+
+if(test-condition){
+    //code
+}
+
+test-condition will always return a boolean value - true/false.
+if the test-condtion is true, then the control enters into the block.
+
+
+If-else Statement:
+
+if(test-condition){
+    //code
+}
+else
+{
+    //code
+}
+
+Switch-Statment:
+
+swtich(choice){
+
+    case casevalue1: code;
+    case casevalue2: code;
+    case casevalue3: code;
+    case casevalue4: code;
+    case casevaluen: code;
+}
+
+
+<!-- Task: -->
+
+<!-- Create a drop down list of different car brands like bmw,kia,...... and based on 
+the user selection display 3 cars of the respective brand. -->
+
+
+Iterative: are used to execute a set of instrction repeatedly based on conditions - while, do-while
+        loop will be repeated for given number of times/elements - for, forEach
+
+
+Syntax:
+
+for(initialValue;Condition;Iteration(inc/dec)){
+
+}
+
+

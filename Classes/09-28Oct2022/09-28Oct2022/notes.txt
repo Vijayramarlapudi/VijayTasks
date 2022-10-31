@@ -1,0 +1,80 @@
+Object: any realtime entity is an object.
+
+object contains properties and methods/functioin/actions.
+
+
+syntax:
+
+var objName={
+    key:value
+}    
+
+key must be a string and value can be of any type,
+
+
+
+Implement logic to control a tv remote.
+
+Ex:
+
+Properties of TV:
+height, width, resolution, color, brand, price
+
+Actions of TV:
+on/off, increase volume, dec volume, chang channel
+
+
+
+
+
+
+
+
+Operators:
+
+An operator is a special symbol/keyword that performs some action.
+
+ex: +,- typeof, instanceof, <, >, ?: .............
+
+
+
+Arithmetic Operators:
+
++, -, *, /, %, --, ++
+
+-- : decrement operator --> decrements the value by 1
+++ : increment operator --> increments the value by 1
+
+
+
+Compparision Operators:
+
+The comparision operators will always result a boolean value.
+
+>, <, >=, <=, !=(Not equels to), ==(Value comparison), ===(Type and value comparision), ?:(Conditional Operator)
+
+
+Logical Operators:
+
+AND(&&), OR(||), NOT(!)
+
+
+
+
+let: is used to create a blocked level variable.
+
+constant: we cannot assign a new value to a constant.
+    
+    
+// Premitive Type Ex
+const a=100;
+a++; // Not Possible
+console.log(a);
+
+// Non Premitive Type Ex
+// a value can be added to non premitive types but can not be reassigned
+const aa = [1,2,3];
+aa.push(100); //Possible
+
+aa=[]  //Not Possible
+console.log(aa);

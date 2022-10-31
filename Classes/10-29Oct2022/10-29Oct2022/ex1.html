@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        uname: <input type="text" id="uname">
+        password: <input type="password" id="pwd">
+        <button onclick="login()">Login</button>
+
+        <script>
+            var dbuname="ravi123";
+            var dbMno='8985865865'
+            var dbPwd="r123"
+           
+            function login(){
+                event.preventDefault();
+
+                var uname=document.getElementById("uname").value;
+                var pwd=document.getElementById("pwd").value;
+
+                if(uname==dbuname || uname==dbMno){
+                    if(pwd==dbPwd){
+                        alert("login success")
+
+                    }else{
+                        alert("login failure")
+                    }
+                }else{
+                    alert("username/mobile is invalid")
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!-- E-mail id is ending with @gmail.com -->
+
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        Username: <input type="text" id="uname"><br><br>
+        <button onclick="validate()">Validate</button>
+
+
+        <script>
+
+            function validate(){
+                event.preventDefault();
+
+                var unameEl = document.getElementById("uname");
+                var uname=unameEl.value
+                var result;
+
+                if(uname.endsWith("@gmail.com")){
+                    result="valid email"
+                }else{
+                    result = uname.concat("@gmail.com")
+                    // result="invalid email"  
+                }
+
+                alert(result)
+            }
+
+        </script>
+
+    </body>
+</html>
