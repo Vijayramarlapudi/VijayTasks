@@ -1,22 +1,22 @@
-function for_ex(){
-    var unames=5;
-
-    for(i=1;i<=unames;i++){
-        console.log(i)
-    }
-}
-
-// for_ex();
-
 // function for_ex(){
-//     var unames=['ravi','kiran','nanda','kumar','ram','Shyam','xyz'];
+//     var unames=5;
 
-//     for(i=0;i<unames.length;i++){
-//         console.log(unames[i])
+//     for(i=1;i<=unames;i++){
+//         console.log(i)
 //     }
 // }
 
 // for_ex();
+
+function for_ex(){
+    var unames=['ravi','kiran','nanda','kumar','ram','Shyam','xyz'];
+
+    for(i=0;i<unames.length;i++){
+        console.log(unames[i])
+    }
+}
+
+for_ex();
 
 
 // Task
