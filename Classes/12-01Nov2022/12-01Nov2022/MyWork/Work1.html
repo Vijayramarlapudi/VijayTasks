@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>CarWorld</title>
+        <link rel="icon" type="image/png" href="Vlogo.jpg">
+
+    </head>
+
+
+    <body>
+        <center>
+        Car Brand : <select id="carbrand" onchange="displayCars()">
+                        <option value="0">Select brand</option>
+                        <option value="1">BMW</option>
+                        <option value="2">Ford</option>
+                        <option value="3">Audi</option>
+                    </select>
+        </center>
+        <br><br>
+        
+
+        <div style="margin: 50px 65px;">
+            <img src="blank1.png" alt="" id="img1" width="400" height="200">  
+            <img src="blank2.png" alt="" id="img2" width="400" height="200">
+            <img src="blank3.png" alt="" id="img3" width="400" height="200">         
+        </div>
+
+
+        <script>
+            function displayCars(){
+                event.preventDefault();
+
+                var selectedCar = document.getElementById("carbrand");
+                var selectedCarID = selectedCar.value;
+
+                 switch(selectedCarID){
+                        case "0":brand="blank";break; //terminates the block
+                        case "1":brand="B";break;
+                        case "2":brand="F";break;
+                        case "3":brand="A";break;
+                 }
+
+                document.getElementById("img1").src = brand + "1.png";
+                document.getElementById("img2").src = brand + "2.png";
+                document.getElementById("img3").src = brand + "3.png";
+            }
+        </script>
+    </body>
+</html>
