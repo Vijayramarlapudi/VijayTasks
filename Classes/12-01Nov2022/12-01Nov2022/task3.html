@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+        <style>
+            .redColor{
+                color: red;
+            }
+            .greenColor{
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1 id="idH1" name="nameH1" class="classH1 redColor" >This is my heading</h1>
+        <h1 id="idH2" name="nameH1" class="classH2 greenColor" >This is my heading1</h1>
+        <h1 id="idH3" name="nameH1" class="classH3 redColor" >This is my heading2</h1>
+
+        <p class="redColor">cnowcniowenwecniown</p>
+
+        <input type="text" class="redColor">
+
+        <button onclick="submit()">Submit</button>
+    </body>
+
+    <script>
+        function submit(){
+            event.preventDefault();
+
+            // var h1Tag = document.getElementById("idH1")
+            // var h1Tag = document.getElementsByName("nameH1")
+            var h1Tag = document.getElementsByClassName("redColor")
+            var h1Tag = document.getElementsByTagName("h1")
+
+            console.log(h1Tag);
+        }
+    </script>
+</html>

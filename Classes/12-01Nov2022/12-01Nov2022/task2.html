@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <ul id="ultag">
+            
+        </ul>
+
+        <ul id="ultag1">
+            
+        </ul>
+
+
+        <script>
+            var unames=['ravi','kiran','nanda','kumar','ram','shyam','xyz'];
+            var rArray=[];
+            var oArray=[]
+
+            for(i=0;i<unames.length;i++){
+
+                if(unames[i].startsWith("r")){
+                    rArray.push(unames[i]);
+                    var ultag = document.getElementById("ultag")
+                    ultag.innerHTML += "<li>" + unames[i] + "</li>"
+                }else{
+                    oArray.push(unames[i])
+                    var ultag1 = document.getElementById("ultag1")
+                    ultag1.innerHTML += "<li>" + unames[i] + "</li>"
+                }
+
+
+                document.get
+            }
+
+            console.log(rArray)
+            console.log(oArray)
+
+        </script>
+    </body>
+</html>
