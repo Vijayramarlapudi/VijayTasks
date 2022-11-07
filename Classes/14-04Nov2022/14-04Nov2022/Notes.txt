@@ -1,0 +1,158 @@
+Functions:
+
+A function is a block of statements that takes an input(optional) process it and provides some result.
+Function name must be a verb and should fllow camel case notation.
+Function should always holds a single responsibility.
+
+syntax:
+
+function funtionname(parameters){
+    //code
+}
+
+functionname(arguments);
+
+
+Function arguments:
+
+
+Duplicate functions:
+
+
+we can represent a function in 4 ways.
+
+1. function with parameters and with return type.
+
+2. function without parameters and with return type.
+
+3. function with parameters and without return type.
+
+4. function without parameters and without return type.
+
+
+<!-- 1. function with parameters and with return type. -->
+
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <form action="">
+            username: <input type="text" id="username">
+            password: <input type="password" id="password">
+
+            <button onclick="login()">Submit</button>
+        </form>
+
+
+        <script>
+            // utility function
+            // With parameters with return type.
+            function getValuebyID(id){
+                return document.getElementById(id).value;
+            }
+            
+
+            // login function
+            // Without parameters without return type.
+            function login(){
+                var username = getValuebyID("username");
+                var password = getValuebyID("password");
+                var result = authenticate(username, password);
+
+                if(result){
+                    window.location.href="dashboard.html"; //to navigate to other page
+                }
+                else{
+                    alert("incorrect login details")
+                }
+            }
+
+            // authenticate function
+            // With parameters with return type.
+            function authenticate(username,password){
+                if(username=="venu" && password=="venu"){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+
+        </script>
+    </body>
+</html>
+
+
+Function expression: if we can refer a function with a variable, then it is function expression.
+Anonymous function: function without name is called as anonymous function.
+
+
+function f1(input){
+    input();
+}
+
+function f2(input){
+    input();
+}
+
+function f3(input){
+    input();
+}
+
+
+f1(function(){
+    console.log("I am an anonymous function");
+});
+
+f2(function(){
+    console.log("I am an anonymous function");
+});
+
+f3(function(){
+    console.log("I am an anonymous function");
+});
+
+
+//calling f1 function with reference variable.
+x=function(){
+    console.log("I am an anonymous function");
+}
+
+f1(x);
+f2(x);
+f3(x);
+
+
+// realtime example
+
+var users=["ravi","kiran","madhu"]
+
+users.forEach(function(user){
+    console.log(user);
+})
+
+
+IIFE'S
+
+Immediately Invoked Function Expressions are used to execute a 
+function only once as soon as the function gets triggered as part of execution.
+
+IIFEs are mainly used in initializing application/pages resources.
+
+Syntax:
+
+(
+    function(){
+        //code
+    }
+)()
+
+We can have multiple IIFEs in a file.
+
+(
+    function(){
+        console.log("IIFE Called")
+    }
+)();

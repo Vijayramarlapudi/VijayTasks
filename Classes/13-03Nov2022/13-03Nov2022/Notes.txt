@@ -1,0 +1,205 @@
+let: is used to create a blocked level variable.
+
+constant: we cannot assign a new value to a constant.
+    
+    
+// Premitive Type Ex
+const a=100;
+a++; // Not Possible
+console.log(a);
+
+// Non Premitive Type Ex
+// a value can be added to non premitive types but can not be reassigned
+const aa = [1,2,3];
+aa.push(100); //Possible
+
+aa=[]  //Not Possible
+console.log(aa);
+
+
+Loops Continuation:
+
+for of:
+    const array1 = ['a', 'b', 'c'];
+
+    for (const element of array1) {
+    console.log(element);
+    }
+
+
+for in:
+    const object = { a: 1, b: 2, c: 3 };
+
+    for (const property in object) {
+    console.log(`${property}: ${object[property]}`);
+    }
+
+
+
+
+while:
+
+syntax:
+
+while(test-condition){
+
+    code
+}
+
+// var i =0;
+
+// while(i<=10){
+//     console.log(i);
+//     i++;
+// }
+
+
+var users=["ravi","kiran","rajesh","ravan","ram"];
+
+var index=0;
+
+while(index < users.length){
+    console.log(users[index]);
+    index++;
+}
+
+
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <ol id="messages" style="list-style-type:circle;">
+
+        </ol>
+
+        <script>
+            var messages=[
+                        {
+                            sender:"ravi",
+                            message: "hello! how are you doing",
+                            timestamp: "3 hours ago"
+                        },
+                        {
+                            sender:"kiran",
+                            message: "hey! weekend is about to come",
+                            timestamp: "2 hours ago"
+                        },
+                        {
+                            sender:"rajesh",
+                            message: "good afternoon",
+                            timestamp: "2 hours ago"
+                        },
+                        {
+                            sender:"Anil",
+                            message: "give a call back",
+                            timestamp: "4 hours ago"
+                        }
+                    ];
+
+           var messagesList = document.getElementById("messages");
+
+            index=0;
+
+            while(index < messages.length){
+                var usermessage= messages[index];
+                messagesList.innerHTML +=  "<l>"+"<h1>"+usermessage.sender+"</h1>"+"&nbsp;&nbsp"+usermessage.message+"&nbsp;&nbsp"+usermessage.timestamp+"</l>"
+                index++;
+            }
+
+        </script>
+
+    </body>
+</html>
+
+
+
+
+
+do-while:
+
+syntax:
+
+do{
+
+}while(test-condition)
+
+
+var isServerInitialized=false;
+
+var i=0;
+
+do{
+    if(!isServerInitialized){
+        console.log("server initialized")
+        isServerInitialized=true;
+    }
+    
+    
+    console.log(i);
+    i++;
+
+}while(i<=10)
+
+
+
+// database -> users
+
+var usersData=[];
+var index=0;
+
+do{
+    if(usersData.length==0){
+        //logic to fetch the data from DB
+        usersData=["ravi","kiran","vasu","madhu"];
+        console.log("data initialized")
+    }
+    console.log(usersData[index]);
+    index++;
+}while(index<usersData.length)
+
+
+
+jump: used to jump the control from one location to other - continue, break and return
+
+
+break - to terminate a block
+        function cricketFormat(){
+            var noOvers = 50;
+
+            switch(noOvers){
+                case 20:console.log("T20 International"); break
+                case 50:console.log("One Day International"); break
+                case 90:console.log("Test International"); break
+                default:console.log("invalid format");
+            }
+        }
+
+        cricketFormat();
+
+
+return - to terminate functon
+        function f1(){
+
+            var a=10;
+
+            if(a < 20){
+                console.log(a);
+                return; //terminates the function
+                console.log(a-2);
+            }
+            console.log(a+20);
+        }
+
+        f1();
+
+cotinue - will skip an iteration
+
+        for(var i=0;i<10;i++){
+            if(i==2){
+                continue; //terminates the iteration
+                console.log(x)
+            }
+            console.log(i)
+        }

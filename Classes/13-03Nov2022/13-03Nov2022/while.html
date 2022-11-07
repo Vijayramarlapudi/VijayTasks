@@ -1,0 +1,64 @@
+
+<!-- Show user messages on ui as a list -->
+
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <ol id="messages" style="list-style-type:circle;">
+
+        </ol>
+
+        <script>
+            var messages=[
+                        {
+                            sender:"ravi",
+                            message: "hello! how are you doing",
+                            timestamp: "3 hours ago",
+                        },
+                        {
+                            sender:"kiran",
+                            message: "hey! weekend is about to come",
+                            timestamp: "2 hours ago"
+                        },
+                        {
+                            sender:"rajesh",
+                            message: "good afternoon",
+                            timestamp: "2 hours ago"
+                        },
+                        {
+                            sender:"Anil",
+                            message: "give a call back",
+                            timestamp: "4 hours ago"
+                        }
+                    ];
+
+            var messagesList = document.getElementById("messages");
+
+            index=0;
+            while(index<messages.length){
+
+                messagesList.innerHTML += "<li>"+ "<h1>" + messages[index].sender + "</h1>"+  '  ' + messages[index].message + '  ' + messages[index].timestamp +  "</li>"
+
+                index++;
+            }      
+
+        </script>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

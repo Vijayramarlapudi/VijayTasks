@@ -1,0 +1,53 @@
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <form action="">
+            username: <input type="text" id="username">
+            password: <input type="password" id="password">
+
+            <button onclick="login()">Submit</button>
+        </form>
+
+
+        <script>
+            // utility function
+            function getValueByID(id){
+                return document.getElementById(id).value
+            }
+
+            // login function
+            function login(){
+                event.preventDefault();
+
+                var uname = getValueByID("username");
+                var pwd = getValueByID("password");
+
+                var result = validate(uname,pwd)
+
+                if(result){
+                    window.location.href = "dashboard.html"
+                }else{
+                    alert("Invalid credentials provided!")
+                }
+            }
+
+            // authenticate function
+            function validate(uname, pwd){
+                if(uname=="ravi" && pwd=="r123"){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+
+            
+
+            
+
+        </script>
+    </body>
+</html>
