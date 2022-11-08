@@ -1,0 +1,299 @@
+Inheritance in JS:
+We can achieve Inheritance in Js through prototype.
+    function Player(name,team,specialist){
+        this.name=name;
+        this.team=team;
+        this.specialist=specialist;
+    }
+
+
+    Player.prototype.details=function(){
+        return this.name+"\t"+this.team+"\t"+this.specialist;
+    }
+
+    var pl1= new Player("rashid","SRH","Bowler");
+    var pl2= new Player("bhuvi","SRH","Bowler");
+    var pl3= new Player("David","SRH","Batsmen");
+
+    console.log(pl1.details());
+    console.log(pl2.details());
+    console.log(pl3.details());
+
+
+
+Arrays:
+Methods of Arrays
+
+const arr = [1,2,3,4]
+
+// // total count of an array
+// console.log(arr.length)
+
+// // value at position/index 2
+// console.log(arr.at(2))
+
+// // add new element at start of an array
+// arr.unshift(11)
+// console.log(arr)
+
+// // remove first element of an array
+// arr.shift()
+// console.log(arr)
+
+// // add new element at the end of an array
+// arr.push(5) 
+// console.log(arr)
+
+// // remove last element of an array
+// arr.pop()
+// console.log(arr)
+
+// // replace all the elements with the given value
+// arr.fill(6)
+// console.log(arr)
+
+// // convert from array to string
+// console.log(arr.join(""))
+
+// // comma seperated string
+// console.log(arr.join(","))
+
+// // convert from string to array
+// console.log(Array.from("ABCDEF"))
+
+// // checks array or not
+// console.log(Array.isArray(arr))
+
+// // revers an array
+// console.log(arr.reverse())
+
+// // verifies whether given value is included in array 
+// console.log(arr.includes(3))
+
+// // creates new array with 
+// var newArr = arr.map(function(item){
+//     return item * 3
+// })
+// console.log(newArr)
+
+// // method returns the value of the first element that passes a test.
+// var x = arr.find((item) => item > 2)
+// console.log(x)
+
+// // creates new array with the filtered values
+// var newArr = arr.filter((item) => item > 2);
+// console.log(newArr)
+
+// // executes a function for each array element and returns true if the function returns true for all elements
+// var bl = arr.every((item) => item > 2);
+// console.log(bl)
+
+// // executes the callback function once for each array element and returns true (and stops) if the function returns true for one of the array elements.
+// var bl = arr.some((item) => item > 2);
+// console.log(bl)
+
+// // find index of the given value
+// var index = arr.findIndex((item) => item===3)
+// console.log(index)
+
+// // xecutes a reducer function for array element and returns a single value: the function's accumulated result
+// var total = arr.reduce((total,number) => total+number,0)
+// console.log(total)
+
+// // returns a new array from a given start, up to a (not inclusive) given end.
+// var newArr = arr.slice(0,2)
+// console.log(newArr)
+
+// // for each
+// arr.forEach((item) => console.log(item * 2))
+
+// // combine two arrays into a single array
+// arr1 = [1,2,3]
+// arr2 = [4,5,6]
+// console.log(arr1.concat(arr2))
+
+// // sort asc
+// var newArr = arr.sort()
+// console.log(newArr)
+
+// // sort dsc
+// var newArr = arr.sort()
+// newArr.reverse()
+// console.log(newArr)
+
+
+Numbers:
+
+In JS, we can create numbers in 2 ways.
+
+1. using primitive type.
+2. using object
+
+var a =100; // recommended
+
+
+var b = new Number(100); // not recommended
+
+console.log(a);
+console.log(b);
+
+console.log(a == b);
+
+console.log(a === b);
+
+
+var b = 20.123;
+
+
+console.log(b.toExponential(2));
+console.log(b.toFixed(2));
+console.log(b.toPrecision(2));
+console.log(b.toPrecision(3));
+
+
+Dates:
+JS provides a predefined date object to get the current date from system date.
+
+var date = new Date();
+
+console.log(date.getDate());
+
+console.log(date.getDay());
+
+console.log(date.getMonth());
+
+console.log(date.getFullYear());
+
+console.log(date.getHours());
+
+console.log(date.getMinutes());
+
+console.log(date.getSeconds());
+
+console.log(date.getMilliseconds());
+
+var customDate = new Date(1990,2,12);
+
+console.log(customDate.getFullYear());
+
+
+function getTimeStamp(){
+    var date = new Date();
+
+    var d = date.getDate()+1+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
+
+    var t = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+
+    return d + "\t" + t;
+}
+
+console.log(getTimeStamp());
+
+
+Strings:
+
+In any application strings take about 20% of the project.
+
+length
+slice()
+substring()
+substr()
+replace()
+replaceAll()
+toUpperCase()
+toLowerCase()
+concat()
+trim()
+trimStart()
+trimEnd()
+padStart()
+padEnd()
+charAt()
+charCodeAt()
+split()
+
+
+
+
+
+
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <form action="">
+            Enter EmailID: <input type="text" id="emailId">
+            <button onclick="emailIdCheck()">Submit</button>
+        </form>
+
+        <script>
+            function emailIdCheck(){
+                event.preventDefault();
+
+                var emailId= document.getElementById("emailId").value;
+
+                email = emailId.toLowerCase();
+                email = email.trim();
+
+                if(!email.endsWith('@gmail.com')){
+                    email = email.concat("@gmail.com");
+                }
+                document.getElementById("emailId").value=email;
+            }
+
+        </script>
+    </body>
+</html>
+
+<!-- Display dynamic list using stringss -->
+
+<html>
+    <head>
+        <style>
+            a{
+                margin-left: 30px;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <div id="navbar">
+
+        </div>
+
+        <script>
+            var links=[
+                {
+                    name:"facebook",
+                    scource:"https://www.facebook.com"
+                },
+                {
+                    name:"linkedin",
+                    scource:"https://www.linkedin.com"
+                },
+                {
+                    name:"gmail",
+                    scource:"https://www.gmail.com"
+                },
+                {
+                    name:"twitter",
+                    scource:"https://www.twitter.com"
+                },
+                {
+                    name:"instagram",
+                    scource:"https://www.instagram.com"
+                },
+            ]
+
+            var navbar = document.getElementById("navbar");
+           
+            links.forEach(function(link){
+                navbar.innerHTML += link.name.link(link.scource)
+            })
+
+        </script>
+    </body>
+</html>

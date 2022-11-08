@@ -1,0 +1,44 @@
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+
+        <table border="2" width="100%">
+            <thead>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Phone</td>
+                <td>Username</td>
+            </thead>
+
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+
+
+       <script>
+           (function(){
+               var http= new XMLHttpRequest();
+               http.open("GET","https://jsonplaceholder.typicode.com/users");
+               http.onreadystatechange=function(){
+                   if(http.status==200 && http.readyState==4){
+                        var users = JSON.parse(http.responseText)
+                        console.log('users',users)
+                        console.table(users)
+
+                        var tbody = document.getElementById("tbody");
+
+                        users.forEach(user => {
+                                tbody.innerHTML+="<tr>"+"<td>"+  user.name  +"</td>"+"<td>"+  user.email  +"</td>"+"<td>"+  user.phone  +"</td>"+"<td>"+  user.username  +"</td>"+"</tr>"
+                        });
+                   }
+               }
+
+               http.send();
+           })();
+       </script> 
+    </body>
+</html>

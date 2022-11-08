@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <form action="">
+            Enter EmailID: <input type="text" id="emailId">
+            <button onclick="emailIdCheck()">Submit</button>
+        </form>
+
+        <script>
+            function emailIdCheck(){
+                event.preventDefault();
+
+                var emailId= document.getElementById("emailId").value;
+
+                email = emailId.toLowerCase();
+                email = email.trim();
+
+                if(!email.endsWith('@gmail.com')){
+                    email = email.concat("@gmail.com");
+                }
+                document.getElementById("emailId").value=email;
+            }
+
+        </script>
+    </body>
+</html>

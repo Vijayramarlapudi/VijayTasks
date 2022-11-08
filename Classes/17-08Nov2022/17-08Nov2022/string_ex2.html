@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            a{
+                margin-left: 30px;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <div id="navbar">
+
+        </div>
+
+        <script>
+            var links=[
+                {
+                    name:"facebook",
+                    scource:"https://www.facebook.com"
+                },
+                {
+                    name:"linkedin",
+                    scource:"https://www.linkedin.com"
+                },
+                {
+                    name:"gmail",
+                    scource:"https://www.gmail.com"
+                },
+                {
+                    name:"twitter",
+                    scource:"https://www.twitter.com"
+                },
+                {
+                    name:"instagram",
+                    scource:"https://www.instagram.com"
+                },
+            ]
+
+            var navbar = document.getElementById("navbar");
+           
+            links.forEach(function(item){
+                navbar.innerHTML += item.name.link(item.scource)
+            })
+
+        </script>
+    </body>
+</html>

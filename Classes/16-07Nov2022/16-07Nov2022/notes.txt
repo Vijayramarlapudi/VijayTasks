@@ -1,0 +1,38 @@
+There are 2 types of operations done w.r.t functions,
+
+1. synchronous:
+2. asynchronous:
+
+
+Debug JS file in html:
+    
+function constructor: 
+can be used to create objects from a template.
+Note: keys must be same in all the objects.
+
+call: 
+    calling a function from one object to another object
+    Note: keys must be same in all the objects.
+
+apply:
+    this is also similir as call
+    call will accepts only individual parameters, where as apply can handle an araray.
+    
+bind:
+    this is also similir as call
+    call will execute as an when we define, where as bind will execute when we call that explicitly.
+
+
+Clousers: 
+    the clousers are nothing but nested functions.
+    clousers allows us to create private functions.
+
+
+Call by value:
+If we pass primitive values as arguemnts while invoking a function then 
+the primitive values will be passed instead of address /reference of a variables.
+
+
+Call by reference:
+When we pass non primitive types as an argument to a function,
+then the address/reference will be passed instedad of the value.
