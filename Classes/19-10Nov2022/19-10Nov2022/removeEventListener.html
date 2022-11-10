@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <button id="one">One</button>
+        <button id="two">Two</button>
+
+
+        <script>
+            var buttonone= document.getElementById('one');
+            // Adding and removing "onclick" event dynamically using "addEventListener" and "removeEventListener"  
+            buttonone.addEventListener('click',f1);
+
+            function f1(){
+                alert("f1 called")
+            }
+
+            var buttontwo = document.getElementById("two");
+            buttontwo.addEventListener('click',f2)
+
+            function f2(){
+                buttonone.removeEventListener('click',f1)
+                alert('event removed from Button One')
+            }
+        </script>
+
+
+    </body>
+</html>

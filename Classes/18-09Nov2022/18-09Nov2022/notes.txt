@@ -1,0 +1,153 @@
+//////////////////////////////////////////////////
+
+
+
+// creating an object using another object
+
+var bank = {
+    name: "ICICI",
+    ifsc: "icic0565",
+    branch: "Madhapur"
+}
+
+var customer = Object.create(bank);
+
+// console.log(customer);
+
+customer.username="ravikumar";
+customer.accno="1234566";
+customer.balance=9000;
+
+console.log(customer);
+console.log(customer.name);
+console.log(customer.ifsc);
+
+
+
+
+var config = Object.freeze({
+    port:9011,
+    url:"http://www.facebook.com",
+    id:1244
+})
+
+console.log('config',config)
+
+config.port = 9799;
+config.s = "hello";
+
+console.log('config',config)
+
+console.log(Object.isFrozen(config));
+
+
+
+
+Problem Statement:
+
+Create a dynamic table using the following data
+
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        
+        <table border="1", width="100%">
+            <thead id="thead">
+
+            </thead>
+
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+
+        <script>
+            var messages =[
+                {
+                    sender:"ravi",
+                    receiver:"kiran",
+                    message:"Hello",
+                    sendAt: "10 34"
+                },
+                {
+                    sender:"kiran",
+                    receiver:"ravi",
+                    message:"hey",
+                    sendAt: "10 36"
+                },
+                {
+                    sender:"ravi",
+                    receiver:"kiran",
+                    message:"all good?",
+                    sendAt: "10 36"
+                },
+                {
+                    sender:"kiran",
+                    receiver:"ravi",
+                    message:"yup dude!",
+                    sendAt: "10 37"
+                }
+            ]
+
+            // console.log('messages',messages)
+             
+            
+            var keys = Object.keys(messages[0]);
+            // console.log('keys',keys)
+
+
+            var thead =document.getElementById("thead");
+            var theadData = "<tr>"
+            for(var i=0;i<keys.length;i++){
+                theadData+="<th>" + keys[i] + "</th>";
+            }
+            theadData = theadData + "</tr>"
+            thead.innerHTML=theadData
+
+        
+            var tbody = document.getElementById("tbody");
+            var tbodyData = "";
+            var tableRows = "";
+
+            for(i1=0;i1<messages.length;i1++){
+                var currentMessage= messages[i1]
+
+                var values = Object.values(currentMessage);
+                // console.log('values',values)
+
+                var tableRow = "<tr>";
+
+                for(var i2=0;i2<values.length;i2++){
+                    tableRow+="<td>"+ values[i2]+"</td>"
+                }  
+                
+                tableRow= tableRow+"</tr>"
+                tableRows+=tableRow
+            }
+            tbody.innerHTML=tableRows
+
+        </script>
+    </body>
+</html>
+
+
+
+this keyword
+var emp={
+    username:"ravi",
+    address:"hyd",
+    role:"dev",
+    
+    getDetails: function(){
+        return this.username + "\t" + this.address + "\t" + this.role;
+    } 
+}
+
+console.log(emp.getDetails());
+
+
+

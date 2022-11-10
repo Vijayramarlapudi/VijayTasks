@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <form action="">
+            Enter Account Number: <input type="number" id="AccNo" oncopy="return copy()" onpaste="return paste()"><span style="color:red;" id="msg"></span>
+        </form>
+
+        <script>
+
+// onpaste="return paste()"  oncopy="return copy()"
+            function paste(){
+                var msg = document.getElementById("msg")
+                msg.innerHTML="you cannot paste!"
+                return false;
+            }
+
+            function copy(){
+                var msg = document.getElementById("msg")
+                msg.innerHTML="you cannot copy!"
+                return false;
+            }
+        </script>
+    </body>
+</html>
+

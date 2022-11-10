@@ -1,0 +1,17 @@
+<!-- get uppercase as values as and when user start keying -->
+
+<html>
+    <body>
+        <input type="text" id="uname" onkeyup="upperCase()">
+
+        <script>
+            function upperCase(){
+                event.preventDefault();
+
+                uname = document.getElementById("uname");
+                unameValue = uname.value;
+                uname.value = unameValue.toUpperCase()
+            }
+        </script>
+    </body>
+</html>

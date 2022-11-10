@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            body *{
+                margin: 10px;
+                border: 1px solid blue;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form action="" onclick="form()">FORM
+            <div onclick="div()">DIV
+                <p id="p">P
+
+                </p>
+            </div>
+        </form>
+
+        
+        <script>
+
+            function form(){
+                alert('form')
+            }
+
+            function div(){
+                alert('div')
+            }
+
+            var p = document.getElementById('p');
+
+            p.addEventListener('click', function(){
+                alert("p one called")
+                // event.stopPropagation(); // will stop propagating from child element to parent element.
+                event.stopImmediatePropagation(); // only first event will be executed and remaining all will be stoped for the same element.
+            })
+
+            p.addEventListener('click', function(){
+                alert("p two called")
+            })
+
+            
+        </script>
+    </body>
+</html>

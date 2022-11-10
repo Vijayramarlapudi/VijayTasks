@@ -1,0 +1,82 @@
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+        <table border="1" width="100%">
+            <thead id="tHead">
+                    
+            </thead>
+            <tbody id="tBody">
+                
+            </tbody>
+        </table>
+        <script>
+            var messages =[
+                {
+                    sender:"ravi",
+                    receiver:"kiran",
+                    message:"Hello",
+                    sendAt: "10 34"
+                },
+                {
+                    sender:"kiran",
+                    receiver:"ravi",
+                    message:"hey",
+                    sendAt: "10 36"
+                },
+                {
+                    sender:"ravi",
+                    receiver:"kiran",
+                    message:"all good?",
+                    sendAt: "10 36"
+                },
+                {
+                    sender:"kiran",
+                    receiver:"ravi",
+                    message:"yup dude!",
+                    sendAt: "10 37"
+                }
+            ]
+
+            var tHead = document.getElementById("tHead");    
+
+
+            var keys= Object.keys(messages[0])
+            var theadData = "<tr>"
+
+
+            for(var i=0;i<keys.length;i++){
+                theadData+="<th>" + keys[i] + "</th>";
+            }
+            theadData = theadData + "</tr>"
+
+            // console.log(theadData)
+            tHead.innerHTML= theadData
+
+
+            var tbody = document.getElementById("tBody");
+            var tbodyData = "";
+            var tableRows = "";
+
+            for(i1=0;i1<messages.length;i1++){
+                var currentMessage= messages[i1]
+
+                var values = Object.values(currentMessage);
+
+                var tableRow = "<tr>";
+
+                for(var i2=0;i2<values.length;i2++){
+                    tableRow+="<td>"+ values[i2]+"</td>"
+                }  
+                
+                tableRow= tableRow+"</tr>"
+                tableRows+=tableRow
+            }
+            tbody.innerHTML=tableRows
+
+        </script>
+    </body>
+</html>

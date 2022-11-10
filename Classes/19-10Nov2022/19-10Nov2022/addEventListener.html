@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <button id="one">One</button>
+        <!-- <button id="two">Two</button> -->
+
+        <script>
+            var buttonone= document.getElementById('one');
+
+            // Adding "onclick" event dynamically using "addEventListener"    
+            buttonone.addEventListener('click',f1);
+            buttonone.addEventListener('click',f2);
+
+            function f1(){
+                alert("f1 called")
+            }
+
+            function f2(){
+                alert("f2 called")
+            }
+            
+        </script>
+    </body>
+</html>

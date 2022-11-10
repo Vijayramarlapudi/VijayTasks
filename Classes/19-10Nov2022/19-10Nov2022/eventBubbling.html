@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            body *{
+                margin: 10px;
+                border: 1px solid blue;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form action="" onclick="form()">FORM
+            <div onclick="div()">DIV
+                <p onclick="p()">P
+
+                </p>
+            </div>
+        </form>
+
+        <button onclick="show()">Show Value</button>
+        <script>
+            var a = 1
+
+            function form(){
+                alert('form')
+                a++;
+            }
+
+            function div(){
+                alert('div')
+                a++;
+            }
+
+            function p(){
+                alert('p')
+                a++;
+            }
+
+
+            function show(){
+                event.preventDefault();
+                // document.write(a)
+                console.log(a)
+            }
+        </script>
+    </body>
+</html>

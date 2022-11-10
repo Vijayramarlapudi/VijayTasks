@@ -1,0 +1,24 @@
+Scopes:
+
+There are 2 types of scopes in JS.
+
+1.Local
+2.Global
+
+
+Events:
+to provide the interaction with UI, we need to implement events.
+
+JS provides differnt types of events,
+
+Events on element (html)
+
+Events on element while the code is being exectued.
+
+addEventListener
+
+removeEventListener
+
+eventBubbling
+
+eventCapturing
