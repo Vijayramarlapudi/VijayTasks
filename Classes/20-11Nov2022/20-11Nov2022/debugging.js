@@ -1,0 +1,7 @@
+// Debugging:
+
+var arr = [1,2,2,3,5]
+
+arr.forEach(value=>{
+    console.log(value)
+})
