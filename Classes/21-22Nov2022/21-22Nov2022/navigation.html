@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1 id="id01">My First Page</h1>
+        <p id="id02"></p>
+        <a href="">some link</a>
+
+        <script>
+            
+            body = document.body
+            bodyParent = body.parentNode
+
+            console.log(bodyParent) //html
+
+            console.log(bodyParent.parentNode) //document
+ 
+            console.log(body.firstChild.nextSibling)  //h1
+
+            console.log(body.lastChild.previousSibling.previousSibling)
+
+            var x = body.lastChild.previousSibling.previousSibling
+            x.href = "www.google.com"
+
+        </script>
+    </body>
+</html>

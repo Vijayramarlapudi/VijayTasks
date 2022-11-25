@@ -1,0 +1,36 @@
+DOM:
+
+DOM stands for Document Object Model which is used to provide dynamic
+nature to the web sites.
+
+Whenever we give a html document to browser, it uses DOM to represent
+each element in the form of object.
+
+Methods:
+
+getElementByID
+getElementsByName
+getElementsByTagName
+getElementsByClassName
+querySelector
+querySelectorAll
+
+
+Nodes:
+Eeach element in HTML will be treated as node (object).
+In DOM, we will have a root node and under root, we will have child nodes.
+
+
+
+Navigation:
+With the HTML DOM, you can navigate the node tree using node relationships.
+
+            document
+
+            html
+
+head                    body
+title,favicon           form, input, h1, p 
+
+
+

@@ -1,0 +1,237 @@
+classes:
+
+In ES6, instead of function constructor, we can use classes.
+
+A class is a blue print / template of a realtime entity (object).
+
+var obj = {
+    key:value
+    'string':premitive/array/obj/function
+}
+
+
+syntax:
+
+ class classname{
+
+ // variables
+
+ // methods
+
+ }
+
+ Problem Statement:
+
+ Represent a bank customer using a class.
+
+
+ class Customer{
+
+    name;
+    accountNumber;
+    balance;
+    mbno;
+
+    constructor(){
+        console.log("constructor called");
+    }
+
+     getAccountDetails(){
+         return this.name+"\t"+ this.accountNumber+"\t"+ this.balance+"\t"+ this.mbno;
+     }
+
+}
+
+
+var ravi = new Customer(); //
+ravi.name="Ravi";
+ravi.accountNumber=1293;
+ravi.balance=9000;
+ravi.mbno=9010101010;
+console.log(ravi);
+
+console.log(ravi.getAccountDetails());
+
+
+Inheritance:
+
+It is the process where a class inherits / reuses the other class 
+resources.
+
+we use extends keyword to inherit a class. 
+
+class Bank{
+    bankname ="icici";
+    branch="madhapur";
+    city="hyderabad";
+    ifscode="ICICI0965687";
+}
+
+class Customer extends Bank{
+    name;
+    accountNumber;
+    balance;
+    mbno;
+
+     getAccountDetails(){
+         return this.name+"\t"+ this.accountNumber+"\t"+ this.balance+"\t"+ this.mbno;
+     }
+
+}
+
+
+var ravi = new Customer(); //
+ravi.name="Ravi";
+ravi.accountNumber=1293;
+ravi.balance=9000;
+ravi.mbno=9010101010;
+console.log(ravi);
+
+console.log(ravi.getAccountDetails());
+
+class A{
+
+    constructor(){
+        console.log("A");
+    }
+}
+class B extends A{
+
+    constructor(){
+        super();
+    }
+}
+
+var b= new B();
+
+
+Static members:
+
+We can define the members(variables, methods) of a class by using static 
+keyword.
+
+when we make a member as static, then it belongs to a class,
+
+that means, it gets only one copy of the memory and it can be accessed 
+only through the class.
+
+
+class StaticDemo{
+
+   static name="ravi";
+   static address="hyderabad";
+      id;
+      age;
+
+    static getDetails(){
+        return StaticDemo.name+"\t"+ StaticDemo.address;
+    }
+}
+
+var sd= new StaticDemo();
+sd.id=900;
+console.log(sd.id);
+sd.name="kiran";
+console.log(sd);
+console.log(StaticDemo.name);
+
+
+
+class StaticDemo{
+
+   static name="ravi";
+   static address="hyderabad";
+      id;
+      age;
+
+    static getDetails(){
+        return StaticDemo.name+"\t"+ StaticDemo.address;
+    }
+}
+
+var sd= new StaticDemo();
+sd.id=900;
+console.log(sd.id);
+sd.name="kiran";
+console.log(sd);
+console.log(StaticDemo.name);
+
+console.log(StaticDemo.getDetails());
+
+
+
+class Employee{
+    name;
+
+    set ename(name){
+         if(name == null || name == ""){
+             console.log("name cannot be null or empty");
+             return;
+         }
+         this.name=name;
+    }
+
+    get ename(){
+        return this.name;
+    }
+}
+
+var emp= new Employee();
+ 
+emp.ename="hello";
+
+console.log(emp);
+
+
+
+
+
+class Employee{
+    name;
+
+    set ename(name){
+         if(name == null || name == ""){
+             console.log("name cannot be null or empty");
+             return;
+         }
+         this.name=name;
+    }
+
+    get ename(){
+        return this.name;
+    }
+}
+
+var emp= new Employee();
+ 
+emp.ename="hello"; // setter 
+
+emp.ename;// getter
+
+console.log(emp);
+
+Generators:
+
+function* f1(){
+     console.log("line 1");
+     console.log("line 2");
+     yield "block-1";
+     console.log("line 3");
+     console.log("line 4");
+     yield "block-2";
+     console.log("line 5");
+     yield "block-3";
+     console.log("line 6");
+     console.log("line 7");
+}
+
+var generator=f1();// line 1, line 2
+generator.next();
+console.log("some code");
+generator.next();
+
+generator.next();
+
+generator.next();
+
+generator.next();

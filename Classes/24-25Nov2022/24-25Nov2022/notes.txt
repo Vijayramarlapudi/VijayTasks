@@ -1,0 +1,235 @@
+TypeScript:
+
+TypeScript is an object oriented programming language which is
+used to develop web applications(front end). over a period of time,
+TS is also supported in backend application development.
+
+TS is a super set of javascript.
+
+TS helps in the fallowing,
+
+1. Strong type checking
+
+2. Auto generation of JS code from TS code
+
+3. Compiler - TypeScript
+
+4. Object oriented
+
+
+Variables:
+
+var - local and global
+
+let - used to create block scoped variables.
+
+const - used to create constants.
+
+    primitive types : can not be reassigned or add values
+    non primitive types: can not be reassigned but values can be added to arrays.
+
+function f1(){
+    if(true){
+        let a=100;
+        console.log(a);
+    }
+    console.log(a)
+}
+
+f1();
+
+
+// Primitive types
+
+// const a=100;
+// a=200;
+// console.log(a)
+
+
+
+// Non Primitive types
+
+// const arr=[1,3,4]
+// arr.push(100);
+// console.log(arr)
+
+
+Datatypes:
+
+Syntax
+
+Var VariableName:Datatype = Value;
+
+TS provides different types of datatypes,
+
+var user:string;
+
+user="venu";
+user=101; //should not store any value other than string
+
+console.log(user);
+
+
+// number
+var a:number=100
+
+
+// boolean
+var isDone:boolean=false;
+
+
+// string
+var username:string="ravi";
+
+
+// any
+var data:any;
+
+data=100;
+data="hello";
+data=false;
+console.log(data)
+
+
+// array
+var users:string[] = ["ravi","kiran"]
+console.log(users)
+
+
+// tuple
+var d:[string,number];
+d=["hello",123]
+console.log(d)
+
+
+// Object
+var x={
+    a:100,
+    b:200
+}
+
+console.log(x.a)
+console.log(x.b)
+console.log(x)
+
+
+
+Object Oriented Programming:
+
+It is the process of representing the realtime entities into programming 
+to provide a solution for a problem in the form of a an application.
+
+object: any realtime entity is an object.
+
+ex: laptop, water bottle, mobile, bank customer....
+
+Every object has 1. properties 2. methods/actions.
+
+Object: customer
+
+Properties: name, account number, account balance, aadhar card, mobile number
+Actions: Withdraw, check balance, deposit...
+
+Problem Statement:
+
+A bank wants its operations to be done online like account creation,
+Withdraw, deposit and balance enquiry.
+
+Object Syntax:
+
+var obj={
+    key:value
+    "name":"ravi"
+    "mNumber":123456
+}
+
+Calss/Obj Syntax in TS:
+
+class ObjectName{
+    Key:Datatype
+    Key:Datatype
+    Key:Datatype
+    name:string="ravi"
+    mNumber:number=123456
+    isCertified:boolean;
+
+    f1(){
+        console.log(this.name)
+    }
+
+    f2(){
+
+    }
+
+    this.isCertified=true;
+
+    this.f1();
+}
+
+class Customer{
+    name:string;
+    accountNumber:number;
+    accountBalance:number;
+    mobileNumber:number;
+
+    withdraw(){
+        console.log("withdraw")
+    }
+
+    deposit(){
+        console.log("deposit")
+    }
+}
+
+var customer1 = new Customer();
+
+customer1.accountBalance=9000;
+customer1.accountNumber=1568619798846;
+customer1.mobileNumber=8985865865;
+customer1.name='ravi';
+
+console.log(customer1);
+customer1.deposit();
+customer1.withdraw();
+
+
+var customer2 = new Customer();
+
+customer2.accountBalance=9000;
+customer2.accountNumber=1568619798846;
+customer2.mobileNumber=8985865865;
+customer2.name='venu';
+
+console.log(customer2);
+customer1.deposit();
+customer1.withdraw();
+
+
+////////////
+
+class User{
+    username:string;
+    password:string;
+    email:string;
+    mobilenumber:number;
+
+    login(){
+        console.log("login");
+    }
+
+    logout(){
+        console.log("logout");
+    }
+
+}
+
+var user1=new User();
+
+user1.username='venu';
+user1.password="venu";
+user1.email="venu@gmail.com";
+user1.mobilenumber=7207838143;
+
+console.log(user1);
+user1.login();
+user1.logout();

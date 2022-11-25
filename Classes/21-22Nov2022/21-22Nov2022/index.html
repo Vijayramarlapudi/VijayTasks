@@ -1,0 +1,62 @@
+<html>
+    <head>
+
+        <style>
+            .abc{
+                color: red;
+            }
+
+            #uname{
+
+            }
+        </style>
+    </head>
+    <body>
+        
+        UserName: <input type="text" id="uname">
+        UserName: <input type="text" id="uname">
+        E-Mail: <input type="email" name="email">
+        Mobile Number: <input type="number" name="mnumber">
+        
+        <p class="abc">I am a paragraph</p>
+
+        <script>
+            // By ID
+            var uname = document.getElementById("uname")
+            console.log(uname)
+
+            uname.placeholder = "enter username"
+            uname.value = "ravi"
+
+            // By Name
+            var email = document.getElementsByName("email")
+            console.log(email)
+
+            // By TagName
+            var inputTags = document.getElementsByTagName("input")
+            console.log(inputTags)
+
+            // By class Name
+            var pTag = document.getElementsByClassName("abc")
+            console.log(pTag)
+
+            // query Selector
+            var uname1 = document.querySelector("#uname")
+            console.log(uname1)
+
+            var pTag1 = document.querySelector(".abc")
+            console.log(pTag1)
+
+            var pTag2 = document.querySelector("p")
+            console.log(pTag2)
+
+
+            // Query Selector All
+            var inputTags1 = document.querySelectorAll("input")
+            console.log(inputTags1)
+
+            var uname2 = document.querySelectorAll("#uname")
+            console.log(uname2)
+        </script>   
+    </body>
+</html>

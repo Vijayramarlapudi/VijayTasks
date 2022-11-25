@@ -1,0 +1,173 @@
+Arrow Functions:
+
+function square(a){
+    return a*a;
+}
+
+console.log(square(10));
+
+var sqr= a => a * a;
+console.log(sqr(20));
+
+
+
+function validate(username,password){
+    if(username == undefined){
+        console.log("username required");
+    }
+    if(username == "abc" && password  == "xyz"){
+        console.log("valid");
+    }
+}
+
+// multi line arrow function
+var valid= (username,password) => {
+
+    if(username == undefined){
+        console.log("username required");
+    }
+    if(username == "abc" && password  == "xyz"){
+        console.log("valid");
+    }
+}
+
+valid("abc",'xyz');
+
+
+*
+var cube= a => console.log(a*a*a);
+
+cube(10);
+
+
+
+// default and arrow
+var x= (a=90) => console.log(a);
+
+x(100);
+
+
+
+Default Parameter Values:
+
+function f1(a=19,b=20){
+console.log(a,b);
+}
+
+f1(20,90);
+
+
+function login(username="guest",password="guest"){
+    if(username  == "guest" && password  == "guest"){
+        console.log("guest login!!");
+    }
+    if(username  == "abc" && password  == "xyz"){
+        console.log("abc logged in!!");
+    }
+}
+
+login("abc","xyz");
+
+
+Rest Parameter:
+
+function f1(a,b,...restparams){
+    console.log(a,b);
+
+    console.log(restparams.length);
+}
+f1(10,20,40,50);
+
+
+
+spread operator:
+
+function f1(a,b,c,d, ...x){
+    console.log(a,b,c,d);
+    console.log(x);
+}
+
+var arr=[10,20,90,100,10,8,90];
+
+f1(...arr); // spread operator
+
+
+String Interpolation:
+
+/*
+
+ line1
+
+        line2 
+
+line3 
+
+       line4
+
+
+*/
+
+var str = `
+line1
+
+                      line2 
+
+line3 
+
+                                    line4
+
+`;
+
+console.log(str);
+
+
+
+Custom Interpolation:
+
+Problem Statement:
+
+X Company wants to give hikes to their employees and want to comminucate 
+the same over emails.
+
+create an email template for the same.
+
+ var employees = [{
+    name:"ravi",
+    role: "software developer",
+    revised_role: "senior software engineer",
+    manager: "kiran"
+},
+
+{
+    name:"rajesh",
+    role: "Junior software developer",
+    revised_role: "software engineer",
+    manager: "Anil"
+},
+{
+    name:"Anil",
+    role: "test engineer",
+    revised_role: "senior test engineer",
+    manager: "Ramesh"
+}
+];
+
+for(var i=0;i<employees.length;i++){
+
+    console.log(`
+    
+       Dear ${employees[i].name},
+    
+    
+             This email is regards to your hike.
+
+             The current role is ${employees[i].role} and revised role is 
+             ${employees[i].revised_role}. 
+
+             We wish you all the very best for the next role.
+
+Thanks and Regards,
+${employees[i].manager}
+    `);
+
+}

@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        
+
+        <script>
+            var body = document.getElementsByTagName("body")
+            console.log(body)
+
+            var form = document.createElement("form")
+            console.log(form)
+
+
+            var input = document.createElement("input")
+            input.type="text"
+            input.placeholder = "enter username"
+
+            console.log(input)
+
+            var button= document.createElement("button")
+            button.value = "Submit"
+            button.innerHTML="Submit"
+
+            console.log(button)
+
+            form.appendChild(input)
+            form.appendChild(button)
+
+            body[0].appendChild(form)
+        </script>
+    </body>
+</html> 
